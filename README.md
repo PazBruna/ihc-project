@@ -2,7 +2,7 @@
 
 Projeto apresentado ao Centro Universitário [FEI](https://portal.fei.edu.br/), como parte dos requisitos necessários para aprovação na disciplina de Interface Humano-Computador (CC8122) do curso de Ciencia da Computação, orientado pelo Prof. Dr. [Fagner de Assis Moura Pimentel](http://lattes.cnpq.br/6747210702910392) e Prof. Dr. [Plino Thomaz Aquino Junior](http://lattes.cnpq.br/6186413528999908).
 
-Este projeto se baseia no Trabalho de Conclusão de Curso (TCC) entitulado **Título do TCC** sob orientação do Professor **Nome do Orientador** e desenvolvido pelos seguintes alunos:
+Este projeto se baseia no Trabalho de Conclusão de Curso (TCC) entitulado **Computação em Nuvem: Estudo dos Impactos da Computação em Nuvem sobre a Eficiência Ambiental e Operacional** sob orientação do Professor **Leonardo Anjoletto Ferreira** e desenvolvido pelos seguintes alunos:
 
 - Bruna Pereira Paz
 - Matheus Miranda Vieira
