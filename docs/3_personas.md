@@ -1,42 +1,144 @@
 # Personas
 
-- Descreva as personas que irão interagir com a aplicação ou produto. Deixe claro suas principais caracteristicas e contextos sociais, econômicos e culturais.
-- Determine qual o grupo específico de pessoas ou organizações para as quais este produto ou serviço é direcionado.
-- Descreva as caracteristicas demográficas, comportamentais, psicográficas ou geográficas deste público alvo que o torna mais propenso a se interessar pelo que está sendo oferecido neste projeto ou serviço.
-- Quais informações sobre o usuário o serviço ou poduto deve guardar?
-- Apresnete apenas as personas primárias.
+> Produto de referência: dashboard web que compara provedores de nuvem (AWS, Azure, Google Cloud, Oracle) com métricas de **custo**, **desempenho** e **impacto ambiental** (PUE/energia/CO₂e), para apoiar decisões de migração e otimização (FinOps/GreenOps).
+
+## 📌 Persona 1 — Bruna Almeida (Primária)
+<img src="/docs/imagens/persona1.jpeg" width="200">
+
+**Cargo:** Gestora de FinOps  
+**Setor:** TI/Financeiro  
+**Idade:** 33  
+**Experiência:** 8+ anos em controle de custos de TI  
+
+### Sobre
+Responsável por prever gastos, criar budgets, negociar reservas (RI/SP) e reportar economia. Atua com múltiplos provedores e precisa traduzir custos técnicos em métricas de negócio (custo por cliente/feature/produto).
+
+### Objetivos
+- Reduzir o **custo por unidade de negócio** sem impactar a disponibilidade.
+- Identificar **anomalias** rapidamente (spikes, drift).
+- Gerar **relatórios mensais** claros para diretoria e áreas parceiras.
+- Medir e acompanhar **emissões (CO₂e)** nos projetos críticos.
+
+### Comportamentos
+- Trabalha com planilhas e painéis; compartilha relatórios no fim do mês.
+- Usa tags/labels e showback/chargeback.
+- Valoriza **templates prontos**, filtros simples e export para PDF/CSV.
+
+### Dores
+- Dificuldade em **comparar multi-cloud** de forma unificada.
+- **Curva de aprendizado** alta em ferramentas enterprise.
+- Dados defasados (atraso no refresh) prejudicam decisões.
+
+### Tarefas recorrentes
+- [ ] Ver custo dia/mês por provedor/serviço/região.  
+- [ ] Checar **top N** projetos que mais cresceram.  
+- [ ] Simular economia com **RI/SP/rightsizing**.  
+- [ ] Relatar **CO₂e por projeto** e tendência mensal.
+
+### Como o produto ajuda
+- Painéis **multi-cloud** unificados (custo × CO₂e).  
+- **KPIs** e **rankings** com filtros rápidos por serviço/região.  
+- **Export** (PDF/CSV) e **templates por persona**.  
+- Índice composto configurável (**custo × carbono × desempenho**).
+
+> **Citação representativa:** “Preciso mostrar, em 1 slide, onde o dinheiro está indo e quanto podemos economizar — sem abrir 5 ferramentas diferentes.”
+
+---
+
+## 📌 Persona 2 — Matheus Rocha (Secundária)
+
+<img src="/docs/imagens/persona2.jpeg" width="200">
+
+**Cargo:** Arquiteto/Engenheiro de Nuvem  
+**Setor:** Engenharia/Plataforma  
+**Idade:** 28  
+**Experiência:** 5+ anos (infra como código, Kubernetes, observabilidade)  
+
+### Sobre
+Projeta e mantém workloads em múltiplas nuvens. Precisa balancear **SLA/performance** com **custo** e **padrões de arquitetura**. Quer dados operacionais acionáveis.
+
+### Objetivos
+- Encontrar **gargalos de desempenho** que elevam custo.  
+- Validar impacto de mudanças (ex.: tipo de instância, região).  
+- Automatizar recomendações (rightsizing/idle/auto-scaling).  
+
+### Comportamentos
+- Vive no terminal/CI/CD, consome dados via **APIs** e **dashboards técnicos**.
+- Curte **drill-down** até recurso/namespace/pod (quando possível).
+
+### Dores
+- Métricas de custo **descoladas** das métricas técnicas.  
+- Falta de **contexto** (quem/qual time gerou o gasto?).  
+- Visão de **emissões** inexistente ou muito superficial.
+
+### Tarefas recorrentes
+- [ ] Investigar **spikes** por serviço/recurso.  
+- [ ] Revisar **recomendações** (CPU/memória/storage/rede).  
+- [ ] Comparar **regiões** e **tipos de instância**.  
+
+### Como o produto ajuda
+- **Drill-down** do custo até o nível necessário (ex.: projeto/serviço).  
+- Relatório de **recomendações acionáveis** (prioridade × economia estimada).  
+- Tabelas comparativas por **região/tipo** + projeção de impacto.
+
+> **Citação representativa:** “Quero ver, em 5 minutos, o que mudar para reduzir 20% do custo sem mexer no SLA.”
+
+---
+
+## 📌 Persona 3 — Ana Ribeiro (Complementar)
+
+<img src="/docs/imagens/persona3.jpeg" width="200">
+
+**Cargo:** Especialista ESG / Sustentabilidade  
+**Setor:** Estratégia/ESG  
+**Idade:** 37  
+**Experiência:** 10+ anos em relatórios GRI/ISSB/CSRD  
 
 
-> **_NOTE:_**: Cada persona deve ter uma foto de rosto que a represente. Vocês podem utilizar esse [site](https://thispersondoesnotexist.com/) para gerar as fotos.
+### Sobre
+Responde por **inventário de emissões** (escopo 2/3 operacional do provedor), metas de redução e prestação de contas a stakeholders. Precisa cruzar custo com **CO₂e** e **energia renovável**.
 
-# Mapa de empatia
+### Objetivos
+- Monitorar **emissões** por projeto/produto/região.  
+- Evidenciar **tendência** e **projeção** anual.  
+- Priorizar iniciativas com **maior redução de CO₂e por real investido**.
 
-![Mapa de empatia](imagens/empatia.png)
+### Comportamentos
+- Trabalha com painéis executivos e **exports** para relatórios corporativos.
+- Revisa **metodologia** (fontes/fatores/assunções) e pede rastreabilidade.
 
-- Determine o mapa de empatia[1] de pelo menos uma persona primária e uma sercundária.
-  - O que o usuário vê: aqui estamos falando do ambiente visual em que o usuário se encontra. Ou seja, o que ele efetivamente enxerga, as pessoas e objetos que estão ao seu redor. Isso ajuda a entender o contexto em que o usuário está inserido e as influências visuais que está recebendo.
-  - O que o usuário ouve: neste quadrante, buscamos entender o que o usuário está ouvindo, os sons que o cercam e como eles influenciam suas ações.
-  - O que o usuário diz e faz: aqui consideramos ações e comportamentos que o usuário apresenta durante sua interação com serviço ou poduto.
-  - O que o usuário pensa e sente: neste quadrante, buscamos entender os pensamentos, sentimentos, emoções e percepções que o usuário tem em relação ao serviço ou poduto. Quais expectativas o usuário cria sobre o serviço ou poduto?
-  Que tipo de serviço ou poduto mais agrada essa persona?
-  - Dores: quando falamos sobre dores do usuário, estamos fazendo referência a quaisquer obstáculos, necessidades ou frustrações que o usuário possa experimentar ao tentar realizar uma tarefa ou alcançar um objetivo. Isso inclui, por exemplo, problemas de usabilidade, dificuldades de acesso ou outros desafios que podem afetar a experiência do usuário.
-  - Ganhos: nesse caso estamos falando de quaisquer benefícios ou recompensas que o usuário possa experimentar ao utilizar o serviço ou poduto. Isso pode incluir economia de tempo ou facilidade de uso, por exemplo. Que desejos do usuário o serviço ou poduto satisfaz?
+### Dores
+- Ferramentas de custo sem **módulo de carbono** consolidado multi-cloud.  
+- **Metodologias** pouco transparentes (fatores de emissão, PUE, mix elétrico).  
 
-# Contexto de uso
+### Tarefas recorrentes
+- [ ] Acompanhar **CO₂e mensal** por programa.  
+- [ ] Comparar **regiões** pelo **mix de energia**.  
+- [ ] Selecionar projetos-piloto para redução de emissões.  
 
-- Descreva o ambiente em que o serviço ou poduto deve ser utilizado.
-- Qual/quais o(s) contexto(s) sociais, econômicos e culturais existentes neste ambiente?
-- Quais informações sobre o ambiente, o serviço ou poduto deve guardar antes de iniciar a interação?
-- O que normalmente deve estar acontecendo com o ambiente quando o usuário interagir com o serviço ou poduto?
+### Como o produto ajuda
+- Painel de **CO₂e** com fonte/metodologia documentadas.  
+- **Comparador de regiões** (custo × CO₂e × PUE).  
+- **Export** para planilhas e relatórios (BigQuery/CSV/PDF).
 
-# Jornada do usuário
+> **Citação representativa:** “Se não consigo explicar a metodologia do número, não posso publicar.”
 
-- Criar uma narrativa para o o seu serviço ou poduto com o usuário.
-- Determine o que o usuário realiza desde a primeira até o última interação com o serviço ou poduto.
-  - Descreva o que acontece ou pode acontecer passo a passo
-  - Como a tarefa começa? Como a tarefa se desenvolve? Como a tarefa termina?
+---
 
+## Contexto de uso (comum às personas)
+- **Cenários:** planejamento de migração, otimização de custos, revisão mensal, roadmap de sustentabilidade.  
+- **Ambiente:** desktop/notebook (dashboard web); uso pontual em tablet/meeting room.  
+- **Acessibilidade:** contraste adequado, tabelas com ordenação, export dos dados brutos, navegação por teclado.  
+- **Dados:** conectores para AWS/Azure/GCP/Oracle; refresh diário (≥ 1×/dia) e possibilidade de forçar atualização.
 
+## Critérios de sucesso por persona
+- **Bruna (FinOps):** redução do **custo/MRR** e **tempo** para gerar o relatório mensal.  
+- **Matheus (Engenharia):** número de **recomendações aplicadas** e **economia** associada.  
+- **Ana (ESG):** **cobertura** e **qualidade** do inventário de emissões (rastreável), além da **tendência** de redução.
 
+## Anti-personas (fora do escopo imediato)
+- **Usuário sem qualquer vínculo com cloud/finanças/ESG** buscando “dashboard genérico”.  
+- **Operações puramente on-prem** sem intenção de comparar com cloud.
 
-[1] Fonte: Adaptado de <https://hazeshift.com.br/mapa-de-empatia/>
+---
+
